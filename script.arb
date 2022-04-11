@@ -1,0 +1,9 @@
+def substrings string, array
+  string = string.downcase
+  my_hash = Hash.new
+
+  array.each do |word| 
+      my_hash[word] = string.scan(word).count unless string.scan(word).empty? == true
+  end
+  p my_hash
+end
